@@ -1,0 +1,25 @@
+bin/
+gen/
+.classpath
+.project
+local.properties
+.settings/
+.externalToolBuilders/*
+obj/
+.cproject
+libs/*.properties
+*.class
+
+# Gradle files
+.gradle/
+build/
+
+# Android Studio files
+.idea/
+*.iml
+
+# jni obj files
+jni/*/obj/*
+
+# MAC auto-gen files
+.DS_Store
