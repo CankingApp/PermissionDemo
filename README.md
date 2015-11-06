@@ -288,7 +288,7 @@ requestPermissions方法调用时会弹出以下对话框．当用户点击拒�
 Android 6.0系统权限管理是安卓系统的一大进步，为安卓手机用户提供了一个安全干净系统前提，鉴于google对未授权应用的奔溃方式处理，
 安卓开发者应当尽早适配6.0系统，提示软件体验．
 
-实战整体代码已提交到GitHub,欢迎下载交流学习～
+实战整体代码已提交到[GitHub](https://github.com/CankingApp/PermissionDemo),欢迎下载交流学习～
 
 
 ## License
