@@ -23,35 +23,43 @@
 
     <include layout="@layout/content_main" />
 
-    <Button
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/fab_margin"
-        android:text="单个权限申请" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="74dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/fab1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|start"
-        android:layout_margin="@dimen/fab_margin"
-        android:text="多个权限申请" />
+        <Button
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="单个权限申请" />
 
-    <Button
-        android:id="@+id/fab2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:text="特殊权限申请" />
+        <Button
+            android:id="@+id/fab1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="多个权限申请" />
 
-    <Button
-        android:id="@+id/fab3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:text="系统设置权限申请" />
+        <Button
+            android:id="@+id/fab2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="弹窗权限申请" />
+
+        <Button
+            android:id="@+id/fab3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="系统设置权限申请" />
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
