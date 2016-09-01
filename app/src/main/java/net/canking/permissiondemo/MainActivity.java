@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         Button fab = (Button) findViewById(R.id.fab);
         Button fab1 = (Button) findViewById(R.id.fab1);
         Button fab2 = (Button) findViewById(R.id.fab2);
+        Button fab3 = (Button) findViewById(R.id.fab3);
+
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,10 +52,15 @@ public class MainActivity extends AppCompatActivity {
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "特殊权限:" + PermissionUtils.checkSettingAlertPermission(MainActivity.this, PermissionUtils.PERMISSION_SETTING_REQ_CODE), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "特殊权限-系统弹窗:" + PermissionUtils.checkSettingAlertPermission(MainActivity.this, PermissionUtils.PERMISSION_SETTING_REQ_CODE), Toast.LENGTH_LONG).show();
             }
         });
-
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "特殊权限-系统设置:" + PermissionUtils.checkSettingSystemPermission(MainActivity.this, PermissionUtils.PERMISSION_SETTING_REQ_CODE), Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 

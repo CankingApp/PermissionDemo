@@ -284,6 +284,46 @@ requestPermissions方法调用时会弹出以下对话框．当用户点击拒�
             }
         }
 
+系统设置权限代码
+```
+    /**
+     * WRITE_SETTINGS 权限
+     * @param cxt
+     * @param req
+     * @return
+     */
+    @TargetApi(23)
+    public static boolean checkSettingSystemPermission(Object cxt, int req) {
+        if (cxt instanceof Activity) {
+            Activity activity = (Activity) cxt;
+            if (!Settings.System.canWrite(activity)) {
+                Log.i(TAG, "Setting not permission");
+
+                Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package:" + activity.getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                activity.startActivityForResult(intent, req);
+                return false;
+            }
+        } else if (cxt instanceof Fragment) {
+            Fragment fragment = (Fragment) cxt;
+            if (!Settings.System.canWrite(fragment.getContext())) {
+                Log.i(TAG, "Setting not permission");
+
+                Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package:" + fragment.getContext().getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                fragment.startActivityForResult(intent, req);
+                return false;
+            }
+        } else {
+            throw new RuntimeException("cxt is net a activity or fragment");
+        }
+
+        return true;
+    }
+```
+    
 ## 结语
 Android 6.0系统权限管理是安卓系统的一大进步，为安卓手机用户提供了一个安全干净系统前提，鉴于google对未授权应用的奔溃方式处理，
 安卓开发者应当尽早适配6.0系统，提示软件体验．

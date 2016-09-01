@@ -47,4 +47,11 @@
         android:layout_margin="@dimen/fab_margin"
         android:text="特殊权限申请" />
 
+    <Button
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="系统设置权限申请" />
 </android.support.design.widget.CoordinatorLayout>
